@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { nav, profile } from "@/data/resume";
 import { ArrowUpRightIcon, CloseIcon, MenuIcon } from "@/components/Icons";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -18,9 +19,21 @@ export default function Header() {
     const close = () => setOpen(false);
     window.addEventListener("hashchange", close);
     window.addEventListener("resize", close);
+
+    /* Keyboard users need a way out of the menu without tabbing through it.
+       Focus is handed back to the toggle so it isn't stranded in a hidden node. */
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+
     return () => {
       window.removeEventListener("hashchange", close);
       window.removeEventListener("resize", close);
+      window.removeEventListener("keydown", onKeyDown);
     };
   }, []);
 
@@ -50,6 +63,7 @@ export default function Header() {
             <ArrowUpRightIcon className="btn-arrow-out h-4 w-4" />
           </a>
           <button
+            ref={toggleRef}
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}

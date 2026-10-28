@@ -38,8 +38,8 @@ export default function About() {
               { term: "Core stack", value: "React · Next.js · TypeScript" },
               { term: "Data layer", value: "PostgreSQL · Prisma ORM" },
             ].map((item) => (
-              <div key={item.term} className="bg-paper px-5 py-5">
-                <dt className="label">{item.term}</dt>
+              <div key={item.term} className="fact-cell bg-paper px-5 py-5">
+                <dt className="label fact-term">{item.term}</dt>
                 <dd className="mt-2 text-sm text-ink">{item.value}</dd>
               </div>
             ))}

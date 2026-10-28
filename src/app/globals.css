@@ -41,7 +41,6 @@
     color: var(--color-ink);
     font-family: var(--font-sans);
     font-synthesis-weight: none;
-    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -116,6 +115,7 @@
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--color-mute);
+    transition: color 0.25s ease;
   }
 
   /* Hairline grid: 1px gaps painted by the container background */
@@ -168,6 +168,42 @@
   .btn-ghost:hover {
     border-color: var(--color-ink);
     background-color: var(--color-surface);
+  }
+
+  /* Rigid bordered badges (hero role / availability) */
+  .pill {
+    transition:
+      transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.25s ease,
+      color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .pill:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-ink);
+    color: var(--color-ink);
+    box-shadow: 0 6px 18px -12px rgb(10 10 11 / 0.5);
+  }
+
+  .pill:active {
+    transform: translateY(0);
+  }
+
+  /* Definition-list cells (About) — lift and warm on hover */
+  .fact-cell {
+    transition:
+      background-color 0.3s ease,
+      transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .fact-cell:hover {
+    background-color: var(--color-surface);
+    transform: translateY(-2px);
+  }
+
+  .fact-cell:hover .fact-term {
+    color: var(--color-accent-ink);
   }
 }
 
@@ -259,6 +295,10 @@
   transition: background-color 0.3s ease;
 }
 
+.stat-label {
+  transition: color 0.3s ease;
+}
+
 .stat::after {
   content: "";
   position: absolute;
@@ -282,6 +322,10 @@
 
 .stat:hover p:first-child {
   color: var(--color-accent-ink);
+}
+
+.stat:hover .stat-label {
+  color: var(--color-ink-soft);
 }
 
 /* Timeline rows (experience / education) */
@@ -455,6 +499,22 @@ html.js [data-reveal].is-visible {
 
 .marquee:hover .marquee__track {
   animation-play-state: paused;
+}
+
+/* Hovering the strip dims every item; the one under the cursor pops back. */
+.marquee__item {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.marquee:hover .marquee__item {
+  opacity: 0.35;
+}
+
+.marquee__item:hover {
+  opacity: 1;
+  transform: scale(1.06);
 }
 
 /* ---------- Link underline that draws in ---------- */

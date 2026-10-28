@@ -4,15 +4,16 @@ export const profile = {
   lastName: "Sulthan J",
   role: "Full-Stack Developer",
   email: "jawidsulthan@gmail.com",
-  phone: "+91 9345871489",
-  phoneHref: "+919345871489",
+  phone: "+971 54 148 1052",
+  phoneHref: "+971541481052",
   linkedin: "https://www.linkedin.com/in/jawid-sulthan-9518a7355/",
   linkedinLabel: "linkedin.com/in/jawid-sulthan",
-  location: "Nagercoil, Kanyakumari District, Tamil Nadu – 629002, India",
-  shortLocation: "Nagercoil, Tamil Nadu, India",
+  nationality: "Indian",
+  location: "Dubai, United Arab Emirates",
+  shortLocation: "Dubai, UAE",
   summary:
     "Full-Stack Developer with 1+ year of hands-on experience building responsive and scalable web applications using React.js, Next.js, TypeScript, PostgreSQL, and Prisma ORM. Experienced in end-to-end development, REST API integration, authentication, validation, reusable UI components, and performance optimization. Strong understanding of modern web development practices, clean code, responsive design, and Git/GitHub-based collaboration.",
-  availability: "Open to opportunities",
+  availability: "Immediately Available",
 } as const;
 
 export const nav = [
@@ -59,7 +60,6 @@ export const skillGroups = [
       "Form Validation",
       "Responsive Web Design",
       "UI Component Development",
-      "Performance Optimization",
     ],
   },
   {
@@ -72,22 +72,22 @@ export const skillGroups = [
     index: "06",
     accent: "#7c3aed",
     title: "Languages",
-    items: ["Tamil — Native", "English — Working proficiency", "Malayalam — Basic"],
+    items: ["Tamil — Native", "English — Working Proficiency", "Malayalam — Basic Proficiency"],
   },
 ] as const;
 
 export const experience = [
   {
-    period: "May 2025 — September 2026",
+    period: "May 2025 — Sep 2026",
     role: "Web Developer",
     company: "MATT Engineering Solutions",
     location: "Tamil Nadu, India",
     points: [
       "Developed responsive and scalable web applications using React.js, Next.js, TypeScript, and Tailwind CSS.",
-      "Contributed to full-stack projects including real-world e-commerce and matrimonial platforms, plus license verification, blockchain voting, and phishing detection applications.",
-      "Built reusable UI components and responsive interfaces, improving usability and the overall application experience.",
+      "Contributed to full-stack projects, including real-world e-commerce and matrimonial platforms, along with license verification, blockchain voting, and phishing detection applications.",
+      "Developed reusable UI components and responsive interfaces, improving usability and overall application experience.",
       "Integrated frontend applications with backend APIs, implemented form validation, and optimized application workflows.",
-      "Collaborated on debugging, testing, and deployment while managing version control with Git and GitHub.",
+      "Collaborated on debugging, testing, and deployment while managing source code and version control using Git and GitHub.",
     ],
   },
 ] as const;
@@ -134,9 +134,11 @@ export const projects: Project[] = [
       "React Hook Form",
     ],
     points: [
-      "Admin dashboard for products, inventory, orders, reviews, coupons, and promotional banners.",
-      "Razorpay for secure online payments and Nodemailer for OTP-based password reset.",
-      "B2B flows: company registration, admin approval, purchase orders, and customized pricing.",
+      "Developed a B2B and B2C e-commerce platform for surgical and medical products, enabling customers and businesses to browse products, place orders, and manage purchases online.",
+      "Built an Admin Dashboard to manage products, inventory, orders, reviews, coupons, and promotional banners.",
+      "Integrated Razorpay for secure online payments and Nodemailer for OTP-based password reset functionality.",
+      "Implemented B2B features including company registration, admin approval, purchase orders, and customized pricing.",
+      "Developed a secure, scalable, and responsive application using Firebase, Zod, React Hook Form, and Tailwind CSS.",
     ],
   },
   {
@@ -155,15 +157,22 @@ export const projects: Project[] = [
       "Prisma ORM",
       "PostgreSQL",
       "NextAuth",
+      "React Hook Form",
+      "Zod",
       "Cloudinary",
       "Razorpay",
-      "Zustand",
+      "Nodemailer",
       "PDFKit",
+      "Zustand",
+      "Lucide React",
     ],
     points: [
-      "Secure registration, login, account verification, and detailed matrimonial profile management.",
-      "Search, advanced filters, match suggestions, likes, and mutual matching functionality.",
-      "Razorpay-powered premium unlocks, plus chat, notifications, and an admin dashboard for the whole platform.",
+      "Developed a full-stack matrimonial platform enabling users to create profiles, discover suitable matches, and connect with potential partners.",
+      "Implemented secure user registration, login, account verification, and detailed matrimonial profile management.",
+      "Developed profile search, advanced filters, match suggestions, likes, and mutual matching functionality.",
+      "Integrated Razorpay to unlock premium profiles and provide access to full profile and contact details after payment.",
+      "Implemented secure chat, notifications, and user interactions for matched and unlocked profiles.",
+      "Built an Admin Dashboard to manage users, profiles, matches, payments, pricing, notifications, and platform content.",
     ],
   },
   {
@@ -175,9 +184,11 @@ export const projects: Project[] = [
       "A role-based RTO workflow that runs from document capture all the way to digital licence issuance.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "PostgreSQL", "SWR"],
     points: [
-      "Document upload, live photo capture, and riding video submission for applications.",
-      "Online traffic rules exam with automatic digital license generation.",
-      "RTO officer dashboard to verify, approve, and manage applications.",
+      "Developed a secure Two-Wheeler License Verification Portal with role-based access using Next.js and TypeScript.",
+      "Implemented document upload, live photo capture, and riding video submission for license applications.",
+      "Built an online traffic rules exam with automatic digital license generation.",
+      "Created an RTO Officer Dashboard to verify, approve, and manage applications.",
+      "Built a responsive UI using Tailwind CSS, shadcn/ui, PostgreSQL, and SWR.",
     ],
   },
   {
@@ -189,9 +200,11 @@ export const projects: Project[] = [
       "Transparent, tamper-proof elections powered by Ethereum smart contracts and live result tracking.",
     stack: ["Next.js", "Tailwind CSS", "Solidity", "Ethereum", "Web3.js", "PostgreSQL", "Prisma ORM"],
     points: [
-      "Smart contracts for secure, transparent, and tamper-proof voting.",
-      "Admin and voter dashboards for election management and live results.",
-      "JWT authentication and password encryption for secure user access.",
+      "Developed a Blockchain Voting System using Next.js, Solidity, Ethereum, and Web3.js.",
+      "Implemented smart contracts for secure, transparent, and tamper-proof voting.",
+      "Built Admin and Voter Dashboards for election management and live result tracking.",
+      "Integrated JWT authentication and password encryption for secure user access.",
+      "Built a scalable backend with PostgreSQL, Prisma ORM, and Tailwind CSS.",
     ],
   },
   {
@@ -201,11 +214,20 @@ export const projects: Project[] = [
     title: "Phishing Defense System",
     summary:
       "Machine-learning phishing URL detection paired with a practical awareness and training module.",
-    stack: ["Next.js", "Tailwind CSS", "Framer Motion", "Python (Flask)", "SVM", "PostgreSQL", "Prisma ORM"],
+    stack: [
+      "Next.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Python (Flask)",
+      "SVM Machine Learning",
+      "PostgreSQL",
+      "Prisma ORM",
+    ],
     points: [
-      "Python Flask backend integrated with an SVM model to detect phishing URLs.",
-      "Awareness module with scam examples, visual guides, and interactive quizzes.",
-      "PostgreSQL and Prisma powering user accounts and quiz data.",
+      "Developed a Phishing Defense System using Next.js, Flask, and SVM Machine Learning.",
+      "Integrated a Python Flask backend with an SVM model to detect phishing URLs.",
+      "Built a phishing awareness module with scam examples, visual guides, and quizzes.",
+      "Managed user accounts and quiz data using PostgreSQL and Prisma ORM.",
     ],
   },
 ];

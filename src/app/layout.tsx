@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/data/site";
@@ -31,8 +31,10 @@ export const metadata: Metadata = {
     "React Developer",
     "Next.js Developer",
     "TypeScript Developer",
-    "Web Developer Tamil Nadu",
+    "Web Developer Dubai",
+    "UAE",
     "India",
+    "Tamil Nadu",
     "Portfolio",
   ],
   authors: [{ name: profile.name }],
@@ -47,11 +49,24 @@ export const metadata: Metadata = {
     description: SITE.tagline,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title,
     description: SITE.tagline,
   },
   robots: { index: true, follow: true },
+  /* Stop iOS from auto-detecting the phone number and rendering it as a
+     green, mis-styled link. */
+  formatDetection: { telephone: false },
+};
+
+/**
+ * Viewport is a separate export from `metadata` in Next.js 14+.
+ * The site is light-only, so we pin `color-scheme` to keep browser UI and
+ * form controls from rendering in dark colours against the light palette.
+ */
+export const viewport: Viewport = {
+  themeColor: "#fbfbf9",
+  colorScheme: "light",
 };
 
 const personJsonLd = {
@@ -64,9 +79,9 @@ const personJsonLd = {
   url: SITE.url,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Nagercoil",
-    addressRegion: "Tamil Nadu",
-    addressCountry: "IN",
+    addressLocality: "Dubai",
+    addressRegion: "Dubai",
+    addressCountry: "AE",
   },
   sameAs: [profile.linkedin],
   knowsAbout: [

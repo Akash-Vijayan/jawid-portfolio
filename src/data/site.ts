@@ -8,7 +8,7 @@ export const SITE = {
   role: "Full-Stack Developer",
   /** Static by design (prerender-safe) — bump these manually. */
   copyrightYear: 2026,
-  lastUpdated: "2026-10-19",
+  lastUpdated: "2026-10-28",
   tagline:
     "Full-stack developer building fast, accessible and scalable web products with React, Next.js and TypeScript.",
 } as const;
